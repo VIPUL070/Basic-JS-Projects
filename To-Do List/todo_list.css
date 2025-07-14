@@ -1,0 +1,137 @@
+:root {
+  --main-bg: #f7faff;
+  --accent: #5e60ce;
+  --accent-light: #bdb2ff;
+  --danger: #ff6b6b;
+  --text: #22223b;
+  --completed: #b5ead7;
+  --shadow: 0 2px 16px 0 rgba(94,96,206,0.07);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #bdb2ff 0%, #f7faff 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-app {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  letter-spacing: 2px;
+}
+
+#todo-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--accent-light);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+#todo-input:focus {
+  border-color: var(--accent);
+}
+
+#todo-form button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#todo-form button:hover {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+#todo-list {
+  list-style: none;
+  margin-top: 1rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.list{
+   flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--accent-light);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+
+}
+
+.list-span{
+  justify-content: space-between;
+  display: flex;
+
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.del-btn{
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+footer {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 500px) {
+  .todo-app {
+    padding: 1rem 0.5rem;
+    min-height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  header h1 {
+    font-size: 1.4rem;
+  }
+}

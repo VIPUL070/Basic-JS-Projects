@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="weather-dashboard">
+    <header>
+      <h1>Weather Dashboard</h1>
+      <form class="search-form">
+        <input type="text" id="city-input" placeholder="Enter city..." autocomplete="off">
+        <button type="submit" id="city-input-btn">Search</button>
+      </form>
+    </header>
+
+    <main>
+      <div class="weather-card">
+        <div class="weather-main">
+          <img id="weather-icon" src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" alt="Weather Icon">
+          <div>
+            <p id="temperature"></p>
+            <p id="description">Description</p>
+          </div>
+        </div>
+        <div class="weather-details">
+          <div>
+            <span class="label">Wind</span>
+            <span id="wind-speed"></span>
+          </div>
+          <div>
+            <span class="label">Humidity</span>
+            <span id="humidity"></span>
+          </div>
+          <div>
+            <span class="label">Date</span>
+            <span id="date"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Weather data provided by your API</p>
+    </footer>
+
+  </div>
+
+  
+</body>
+  <script src="script.js"></script>
+
+</html>

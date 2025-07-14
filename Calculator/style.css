@@ -1,0 +1,109 @@
+
+body {
+  background: #18191a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
+}
+
+.iphone-calc-app {
+  background: #000;
+  border-radius: 40px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  width: 320px;
+  padding: 32px 16px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calc-display {
+  width: 100%;
+  min-height: 70px;
+  background: transparent;
+  color: #fff;
+  font-size: 2.8rem;
+  text-align: right;
+  padding: 0 12px;
+  margin-bottom: 18px;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+  line-height: 70px;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+
+.calc-keys {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 14px;
+}
+
+.btn {
+  background: #333333;
+  color: #fff;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.btn:active {
+  background: #444;
+}
+
+.btn-func {
+  background: #a5a5a5;
+  color: #000;
+}
+
+.btn-op {
+  background: #ff9500;
+  color: #fff;
+}
+
+.btn-op:last-child {
+  background: #ff9500;
+}
+
+#btn-zero {
+  grid-column: span 2;
+  width: 144px;
+  border-radius: 32px;
+  justify-content: flex-start;
+  padding-left: 28px;
+}
+
+@media (max-width: 400px) {
+  .iphone-calc-app {
+    width: 98vw;
+    padding: 16px 2vw 16px 2vw;
+    border-radius: 24px;
+  }
+  .btn, .btn-zero {
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+    font-size: 1.1rem;
+  }
+  .btn-zero {
+    width: 100%;
+    padding-left: 18px;
+  }
+  .calc-display {
+    font-size: 2rem;
+    min-height: 48px;
+    line-height: 48px;
+  }
+}
