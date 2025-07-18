@@ -1,6 +1,8 @@
 "use strict";
 
-const apiKey = '7c22b29cc0f693faca036d2516ffc1ef';
+const apiKey = config.WEATHER_API_KEY;
+
+
 
 function getWeather() {
   const userInput = document.getElementById('city-input');
