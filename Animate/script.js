@@ -49,5 +49,5 @@ function loaderAnimation(){
     }, 4000);
 }
 
-menuAnimation()
+// menuAnimation()
 loaderAnimation()
